@@ -1,0 +1,30 @@
+# Netlify deployment config
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Keep the Vite build from failing on peer/rollup optional deps.
+  NPM_FLAGS = "--include=dev"
+
+[functions]
+  node_bundler = "esbuild"
+  # Ship pg as-is rather than letting esbuild inline its dynamic requires.
+  external_node_modules = ["pg", "pg-native"]
+
+# API — must come before the SPA fallback so it wins.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# SPA fallback for the static site.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

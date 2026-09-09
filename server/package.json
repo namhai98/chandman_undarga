@@ -1,0 +1,19 @@
+{
+  "name": "@chandman/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=../.env --env-file-if-exists=.env src/index.js",
+    "start": "node --env-file-if-exists=../.env --env-file-if-exists=.env src/index.js",
+    "migrate": "node --env-file-if-exists=../.env --env-file-if-exists=.env src/migrate.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "pg": "^8.13.1",
+    "serverless-http": "^3.2.0"
+  }
+}
