@@ -23,7 +23,7 @@ function ServiceCard({ service, index }) {
       as="article"
       delay={index}
       className={[
-        "flex flex-col rounded-[1.5rem] border border-sage-soft/50 bg-white p-8 shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1",
+        "flex flex-col rounded-[1.5rem] border border-sage-soft/50 bg-white p-6 shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1 sm:p-8",
         service.wide ? "md:col-span-2 lg:col-span-2" : "",
       ].join(" ")}
     >
@@ -66,7 +66,7 @@ function ServiceCard({ service, index }) {
 
 export function Services() {
   return (
-    <section id="services" className="bg-white py-20 sm:py-28 lg:py-36">
+    <section id="services" className="bg-white py-16 sm:py-24 lg:py-32">
       <div className="container-x">
         <SectionHead
           eyebrow="Үйлчилгээ"

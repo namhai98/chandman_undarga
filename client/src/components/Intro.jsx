@@ -3,7 +3,7 @@ import { STATS } from "../data/content.js";
 
 export function Intro() {
   return (
-    <section id="about" className="py-20 sm:py-28 lg:py-36">
+    <section id="about" className="py-16 sm:py-24 lg:py-32">
       <div className="container-x grid items-center gap-12 lg:grid-cols-[0.85fr_1fr] lg:gap-20">
         <Reveal className="order-2 lg:order-1">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-[var(--shadow-card)]">

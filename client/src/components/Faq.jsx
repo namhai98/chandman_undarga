@@ -5,7 +5,7 @@ import { CONTACT, FAQ } from "../data/content.js";
 function AccordionItem({ item, open, onToggle }) {
   return (
     <div
-      className="border-b border-sage-soft/50"
+      className="acc-item border-b border-sage-soft/50"
       data-open={open ? "true" : "false"}
     >
       <button
@@ -27,9 +27,7 @@ function AccordionItem({ item, open, onToggle }) {
         </span>
       </button>
       <div className="acc-panel">
-        <div>
-          <p className="pb-6 pr-10 text-ink/70">{item.a}</p>
-        </div>
+        <p className="pb-6 pr-10 text-ink/70">{item.a}</p>
       </div>
     </div>
   );
@@ -39,7 +37,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="py-20 sm:py-28 lg:py-36">
+    <section id="faq" className="py-16 sm:py-24 lg:py-32">
       <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:gap-20">
         <Reveal>
           <p className="eyebrow">Түгээмэл асуулт</p>

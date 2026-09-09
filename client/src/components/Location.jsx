@@ -3,7 +3,7 @@ import { CONTACT } from "../data/content.js";
 
 export function Location() {
   return (
-    <section id="contact" className="bg-white py-20 sm:py-28 lg:py-36">
+    <section id="contact" className="bg-white py-16 sm:py-24 lg:py-32">
       <div className="container-x grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <p className="eyebrow">Холбоо барих</p>

@@ -3,7 +3,7 @@ import { JOURNEY } from "../data/content.js";
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 sm:py-28 lg:py-36">
+    <section id="experience" className="py-16 sm:py-24 lg:py-32">
       <div className="container-x">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Туршлага</p>
@@ -12,13 +12,16 @@ export function Experience() {
           </h2>
         </Reveal>
 
-        <ol className="mt-14 grid gap-px overflow-hidden rounded-[1.5rem] border border-sage-soft/50 bg-sage-soft/40 md:grid-cols-5">
+        <ol className="mt-12 grid gap-px overflow-hidden rounded-[1.5rem] border border-sage-soft/50 bg-sage-soft/40 sm:mt-14 sm:grid-cols-2 lg:grid-cols-5">
           {JOURNEY.map((step, i) => (
             <Reveal
               as="li"
               key={step.no}
               delay={i}
-              className="flex flex-col gap-3 bg-white p-7"
+              className={[
+                "flex flex-col gap-3 bg-white p-6 lg:p-7",
+                i === 4 ? "sm:col-span-2 lg:col-span-1" : "",
+              ].join(" ")}
             >
               <span className="font-display text-2xl text-sage">{step.no}</span>
               <h3 className="text-xl text-forest-dark">{step.title}</h3>

@@ -5,7 +5,7 @@ export function FinalCta() {
   const { openGiftModal } = useGiftModal();
 
   return (
-    <section className="on-dark relative overflow-hidden bg-forest-dark py-28 text-center text-white sm:py-36">
+    <section className="on-dark relative overflow-hidden bg-forest-dark py-20 text-center text-white sm:py-28 lg:py-36">
       <div className="pointer-events-none absolute inset-0 opacity-[0.12]" aria-hidden="true">
         <svg
           viewBox="0 0 600 400"
@@ -29,7 +29,7 @@ export function FinalCta() {
       </div>
 
       <Reveal className="container-x relative">
-        <h2 className="text-5xl sm:text-6xl lg:text-7xl">
+        <h2 className="text-[2.5rem] leading-[1.1] sm:text-6xl sm:leading-[1.08] lg:text-7xl">
           Өөртөө{" "}
           <br />
           <em>цаг гаргаарай.</em>

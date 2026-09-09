@@ -4,7 +4,7 @@ import { AUDIENCE } from "../data/content.js";
 
 export function Audience() {
   return (
-    <section className="bg-white py-20 sm:py-28 lg:py-36">
+    <section className="bg-white py-16 sm:py-24 lg:py-32">
       <div className="container-x">
         <SectionHead
           eyebrow="Бэлэг"
@@ -16,13 +16,16 @@ export function Audience() {
           lead="Халамж хэрэгтэй, амралт хүрэлцдэггүй хэн бүхэнд тохирсон дулаахан бэлэг."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-5">
           {AUDIENCE.map((item, i) => (
             <Reveal
               as="article"
               key={item.title}
               delay={i}
-              className="rounded-[1.25rem] border border-sage-soft/50 bg-cream p-7 text-center transition-transform duration-300 hover:-translate-y-1"
+              className={[
+                "rounded-[1.25rem] border border-sage-soft/50 bg-cream p-6 text-center transition-transform duration-300 hover:-translate-y-1 sm:p-7",
+                i === 4 ? "sm:col-span-2 md:col-span-1" : "",
+              ].join(" ")}
             >
               <span className="text-3xl">{item.icon}</span>
               <h3 className="mt-3 text-xl text-forest-dark">{item.title}</h3>

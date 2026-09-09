@@ -8,14 +8,14 @@ export function GiftCard() {
   return (
     <section
       id="gift"
-      className="on-dark relative overflow-hidden bg-[linear-gradient(160deg,#245c43_0%,#163d2d_100%)] py-24 text-white sm:py-32"
+      className="on-dark relative overflow-hidden bg-[linear-gradient(160deg,#245c43_0%,#163d2d_100%)] py-16 text-white sm:py-24 lg:py-32"
     >
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-[36rem] w-[36rem] rounded-full bg-sage/15 blur-[120px]"
         aria-hidden="true"
       />
 
-      <div className="container-x relative grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div className="container-x relative grid items-center gap-10 sm:gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <p className="eyebrow eyebrow--light">Бэлгийн карт</p>
           <h2 className="mt-4 text-4xl sm:text-5xl">

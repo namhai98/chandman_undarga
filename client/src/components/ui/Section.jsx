@@ -7,7 +7,7 @@ export function Section({ id, tint = false, className = "", children }) {
     <section
       id={id}
       className={[
-        "py-20 sm:py-28 lg:py-36",
+        "py-16 sm:py-24 lg:py-32",
         tint ? "bg-white" : "",
         className,
       ]
@@ -26,7 +26,7 @@ export function SectionHead({ eyebrow, title, lead, align = "center" }) {
       className={[
         "max-w-2xl",
         centered ? "mx-auto text-center" : "",
-        "mb-14 lg:mb-20",
+        "mb-12 sm:mb-14 lg:mb-20",
       ].join(" ")}
     >
       <p className="eyebrow">{eyebrow}</p>

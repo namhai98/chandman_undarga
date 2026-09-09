@@ -39,7 +39,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,transparent_40%,rgba(22,61,45,0.55)_100%)]" />
       </div>
 
-      <div className="container-x py-32">
+      <div className="container-x py-28 sm:py-28 lg:py-32">
         <div className="max-w-3xl">
           <Reveal as="p" className="eyebrow eyebrow--light">
             Чандмань Ундарга · Энергийн төв
@@ -48,16 +48,23 @@ export function Hero() {
           <Reveal
             as="h1"
             delay={1}
-            className="mt-6 text-[2.75rem] leading-[1.08] text-balance sm:text-6xl lg:text-7xl"
+            className="mt-5 text-[2.4rem] leading-[1.1] text-balance sm:mt-6 sm:text-6xl sm:leading-[1.08] lg:text-7xl"
           >
             Танд ч, таны хайртай хүнд ч <em>өөртөө зориулах цаг</em>
           </Reveal>
 
-          <Reveal as="p" delay={2} className="mt-7 max-w-xl text-lg text-white/80 sm:text-xl">
+          <Reveal
+            as="p"
+            delay={2}
+            className="mt-6 max-w-xl text-base text-white/80 sm:mt-7 sm:text-xl"
+          >
             Эрч хүч, амралт, тайвшралыг нэг дор мэдрэх жижигхэн аялал.
           </Reveal>
 
-          <Reveal delay={3} className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <Reveal
+            delay={3}
+            className="mt-9 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap"
+          >
             <a href="#services" className="btn btn--light btn--lg">
               Үйлчилгээнүүдтэй танилцах
             </a>
